@@ -1,0 +1,227 @@
+body {
+    width: 53.4em;
+    font-size: medium;
+    margin: 0 auto;
+    background-color: floralwhite;
+    font-family: "微软雅黑",Verdana,sans-serif;
+}
+
+ruby {
+    position: relative;
+    padding: 0.4em 0 0 0;
+    display: inline-block;
+}
+
+    ruby > rt {
+        display: inline-block;
+        font-size: 0.4em;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+body > div {
+    padding: 1em;
+}
+
+#name {
+    display: inline-block;
+    cursor: default;
+    color: silver;
+}
+
+    #name ruby {
+        font-size: 2.5em;
+        font-weight: bolder;
+    }
+
+        #name ruby > rt {
+            color: lightskyblue;
+            text-align: center;
+        }
+
+            #name ruby > rt:first-letter {
+                color: pink;
+            }
+
+            #name ruby > rt > sup {
+                font-size: 50%;
+                color: tan;
+                margin-right: 0.3em;
+            }
+
+    #name:hover {
+        text-shadow: 0px 0px 0.1em rgba(0,0,0,0.5);
+        color: black;
+    }
+
+        #name:hover ruby > rt {
+            color: blue;
+        }
+
+            #name:hover ruby > rt:first-letter {
+                color: red;
+            }
+
+            #name:hover ruby > rt > sup {
+                color: firebrick;
+            }
+
+    #name .n {
+        display: none;
+    }
+
+#divContent {
+    font-size: 0;
+}
+
+    #divContent > * {
+        font-size: x-large;
+    }
+
+a.nickname.url {
+    color: silver;
+    text-decoration: none;
+}
+
+    a.nickname.url:hover {
+        color: black;
+        background-color: transparent;
+    }
+
+a:hover {
+    text-shadow: 0px 0px 0.1em black;
+    text-decoration: none;
+    background-color: red;
+}
+
+
+.block {
+    display: inline-block;
+    position: relative;
+    background-color: lightskyblue;
+    width: 10.2em;
+    height: 4.5em;
+    margin: 0.5em 0.6em;
+    overflow: hidden;
+    color: white;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+    .block:hover {
+        box-shadow: 0px 0px 0.1em black;
+        background-color: mediumslateblue;
+    }
+
+    .block.min {
+        width: 4.5em;
+    }
+
+    .block img.logo {
+        width: 4.5em;
+        height: 4.5em;
+    }
+
+    .block > header {
+        font-size: 1em;
+        position: absolute;
+        top: 0.05em;
+        right: 0.1em;
+        left: 4.6em;
+        height: 1.5em;
+    }
+
+    .block a {
+        color: white;
+    }
+
+    .block > header:before {
+        content: '@';
+        color: red;
+    }
+
+    .block > article {
+        font-size: 0.65em;
+        position: absolute;
+        top: 2em;
+        left: 7.2em;
+        right: 0.1em;
+        bottom: 0.1em;
+    }
+
+        .block > article > p {
+            margin: 0;
+            line-height: 150%;
+        }
+
+    .block.min > header, .block.min > article {
+        display: none;
+    }
+
+p a {
+    line-height: 100%;
+    padding: 0 0.1em;
+}
+
+p img.favicon {
+    vertical-align: middle;
+    border-radius: 0.5em;
+    margin-right: 0.3em;
+    width: 1em;
+    height: 1em;
+}
+
+
+
+
+
+.block.unkown {
+    background-color: lightskyblue;
+    display:none;
+}
+
+#about mark {
+    color: white;
+    background-color: transparent;
+    font-weight: bolder;
+}
+
+#email mark {
+    background-color: transparent;
+}
+
+#copyright {
+    position: fixed;
+    background-color: lightskyblue;
+    height: 1em;
+    left: 0;
+    right: 0;
+    bottom: -1.5em;
+    text-align: left;
+    color: white;
+    font-size: 0.8em;
+    padding: .5em 5em;
+}
+#copyright a {
+    color: white;
+    margin: 0 .5em;
+}
+#copyright:hover {
+    bottom: 0;
+    background-color: mediumslateblue;
+}
+#copyright .misc {
+    margin: .1em;
+    height: 0.5em;
+}
+#copyright .misc:hover {
+    background-color: transparent;
+}
+#copyright img {
+    width: 1em;
+    height: 1em;
+    vertical-align: top;
+}
