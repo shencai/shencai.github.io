@@ -1,5 +1,18 @@
+@keyframes rainbowColor {
+  0% { color: red; } 
+  15% { color: orange; } 
+  30% { color: yellow; } 
+  45% { color: green; } 
+  60% { color: aquamarine; } 
+  75% { color: blue; } 
+  90% { color: purple; } 
+  100% { color: red; } 
+}
+
 body {
-    width: 53.4em;
+    width: 80%;
+    max-width:50em;
+    min-width: 35em;
     font-size: medium;
     margin: 0 auto;
     background-color: floralwhite;
@@ -30,6 +43,7 @@ body > div {
     display: inline-block;
     cursor: default;
     color: silver;
+    padding:0 2em;
 }
 
     #name ruby {
@@ -83,7 +97,6 @@ body > div {
 
 a.nickname.url {
     color: silver;
-    text-decoration: none;
 }
 
     a.nickname.url:hover {
@@ -91,24 +104,28 @@ a.nickname.url {
         background-color: transparent;
     }
 
-a:hover {
-    text-shadow: 0px 0px 0.1em black;
+a {
     text-decoration: none;
-    background-color: red;
+}
+a:hover {
+
+    font-weight: bolder;
 }
 
 
 .block {
-    display: inline-block;
+    display: block;
     position: relative;
     background-color: lightskyblue;
-    width: 10.2em;
-    height: 4.5em;
+    min-height: 4.5em;
     margin: 0.5em 0.6em;
+    padding: 0 0 0 10em;
     overflow: hidden;
     color: white;
-    border-top-right-radius: 1em;
-    border-bottom-left-radius: 1em;
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    font-weight: bolder;
+
 }
 
     .block:hover {
@@ -116,40 +133,28 @@ a:hover {
         background-color: mediumslateblue;
     }
 
-    .block.min {
-        width: 4.5em;
-    }
-
-    .block img.logo {
-        width: 4.5em;
-        height: 4.5em;
-    }
-
     .block > header {
-        font-size: 1em;
-        position: absolute;
+        position:absolute;
+        z-index: 1;
+        font-size: 3em;
         top: 0.05em;
         right: 0.1em;
-        left: 4.6em;
+        left: 0.1em;
+        padding-right: -6em;
         height: 1.5em;
-    }
-
-    .block a {
-        color: white;
+        color: rgba(255,255,255,0.5);
     }
 
     .block > header:before {
         content: '@';
-        color: red;
+        color: rgba(255, 192, 203, 0.3);
     }
 
     .block > article {
-        font-size: 0.65em;
-        position: absolute;
-        top: 2em;
-        left: 7.2em;
-        right: 0.1em;
-        bottom: 0.1em;
+        z-index: 2;
+        font-size: 1em;
+        margin: 1em;       
+
     }
 
         .block > article > p {
@@ -174,54 +179,32 @@ p img.favicon {
     height: 1em;
 }
 
-
-
-
-
 .block.unkown {
     background-color: lightskyblue;
     display:none;
 }
 
-#about mark {
-    color: white;
-    background-color: transparent;
-    font-weight: bolder;
-}
-
-#email mark {
-    background-color: transparent;
-}
-
 #copyright {
-    position: fixed;
-    background-color: lightskyblue;
-    height: 1em;
-    left: 0;
-    right: 0;
-    bottom: -1.5em;
-    text-align: left;
-    color: white;
-    font-size: 0.8em;
+    text-align: center;
+    color: silver;
+    font-size: 1em;
     padding: .5em 5em;
 }
-#copyright a {
-    color: white;
-    margin: 0 .5em;
+    #copyright::before {
+        content: "©";
+    }
+
+    #copyright a {
+        color: silver;
+        margin: 0 .5em;
+    }
+
+    #copyright a:hover {
+        animation: rainbowColor 5s infinite;
+    }
+.email::before{
+    content: "<-";
 }
-#copyright:hover {
-    bottom: 0;
-    background-color: mediumslateblue;
-}
-#copyright .misc {
-    margin: .1em;
-    height: 0.5em;
-}
-#copyright .misc:hover {
-    background-color: transparent;
-}
-#copyright img {
-    width: 1em;
-    height: 1em;
-    vertical-align: top;
+.email::after{
+    content: "->";
 }
